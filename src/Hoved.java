@@ -25,13 +25,10 @@ public class Hoved
         int month = test.get(test.MONTH);
         while(i < 1000)
         {
-            Appointment appointment = new Appointment(one,one2);
-            Appointment appointment2 = new Appointment(one,one2);
-            Appointment appointment3 = new Appointment(one,one2);
+            Appointment appointment = new Appointment(one,one2,test);
+            Appointment appointment2 = new Appointment(one,one2,test);
+            Appointment appointment3 = new Appointment(one,one2,test);
             Day day = new Day();
-            day.setAppointments(appointment);
-            day.setAppointments(appointment2);
-            day.setAppointments(appointment3);
             days.add(day);
             //System.out.println(test.getTime());
             test.add(test.DATE,1);
@@ -64,5 +61,11 @@ public class Hoved
             }
             System.out.println();
         }
+        Calendar calTest = Calendar.getInstance();
+        calTest.set(calTest.YEAR, calTest.MONTH,5, 18,30 );
+        Appointment testApp = new Appointment(one, one2, calTest);
+        System.out.println(testApp.getAppointment());
+        one.addAppointment(testApp);
+        one.addAppointment(testApp);
     }
 }
