@@ -57,4 +57,8 @@ public class Tannlege extends Person
             System.out.println("Appointment added");
         }
     }
+    public ArrayList<Appointment> getAppointments()
+    {
+        return appointments;
+    }
 }
