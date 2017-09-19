@@ -48,7 +48,7 @@ class Hour
             minutes.add(minute);
         }
         hour = new ArrayList<>();
-        for(int i = 0; i < 24; i++)
+        for(int i = 0; i < 12; i++)
         {
             hour.add(minutes);
         }
